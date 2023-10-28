@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(179,179,179);
+    background: radial-gradient(circle, rgba(179,179,179,1) 11%, rgba(241,242,244,1) 100%);
+}
+
+.container {
+    text-align: center;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(175,0,255,1) 53%, rgba(100,0,200,1) 77%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #d0d0d0;
+}
+.cell:active{
+    background-color: #000000;
+}
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+button:hover{
+    background-color: #fff;
+    border: 1px solid rgba(175,0,255,1);
+    color: rgba(175,0,255,1);
+}
+.message {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+@media (min-width: 600px) {
+    .board {
+        max-width: 100%;
+    }
+
+    .cell {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        font-size: 35px;
+    }
+
+    button {
+        font-size: 19px;
+        padding: 20px 30px;
+
+    }
+
+    .message {
+        font-size: 29px;
+    }
+}
